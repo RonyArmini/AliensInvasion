@@ -1,7 +1,4 @@
-import pygame
+from code.Game import Game
 
-pygame.init()
-window = pygame.display.set_mode(size=(800, 600))
-
-while True:
-    pass
+game = Game()
+game.run()
