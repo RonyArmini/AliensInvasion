@@ -39,6 +39,22 @@ ENTITY_DAMAGE = {
     'Enemy1Shot': 20,
     'Enemy2': 1,
     'Enemy2Shot': 15,
+    'Explosion0': 0,
+    'Explosion1': 0,
+    'Explosion2': 0,
+    'Explosion3': 0,
+    'Explosion4': 0,
+    'Explosion5': 0,
+    'Explosion6': 0,
+    'Explosion7': 0,
+    'Explosion8': 0,
+    'Explosion9': 0,
+    'Explosion10': 0,
+    'Explosion11': 0,
+    'Explosion12': 0,
+    'Explosion13': 0,
+    'Explosion14': 0,
+    'Explosion15': 0,
 
 }
 
@@ -63,6 +79,23 @@ ENTITY_SCORE = {
     'Enemy1Shot': 0,
     'Enemy2': 120,
     'Enemy2Shot': 0,
+    'Explosion0': 0,
+    'Explosion1': 0,
+    'Explosion2': 0,
+    'Explosion3': 0,
+    'Explosion4': 0,
+    'Explosion5': 0,
+    'Explosion6': 0,
+    'Explosion7': 0,
+    'Explosion8': 0,
+    'Explosion9': 0,
+    'Explosion10': 0,
+    'Explosion11': 0,
+    'Explosion12': 0,
+    'Explosion13': 0,
+    'Explosion14': 0,
+    'Explosion15': 0,
+
 
 }
 
@@ -87,14 +120,31 @@ ENTITY_HEALTH = {
     'Enemy1Shot': 1,
     'Enemy2': 60,
     'Enemy2Shot': 1,
+    'Explosion0': 1,
+    'Explosion1': 1,
+    'Explosion2': 1,
+    'Explosion3': 1,
+    'Explosion4': 1,
+    'Explosion5': 1,
+    'Explosion6': 1,
+    'Explosion7': 1,
+    'Explosion8': 1,
+    'Explosion9': 1,
+    'Explosion10': 1,
+    'Explosion11': 1,
+    'Explosion12': 1,
+    'Explosion13': 1,
+    'Explosion14': 1,
+    'Explosion15': 1,
+
 
 }
 
 ENTITY_SPEED = {
     'Level1Bg0': 0,
     'Level1Bg1': 0,
-    'Level1Bg2': 1,
-    'Level1Bg3': 1,
+    'Level1Bg2': 0.2,
+    'Level1Bg3': 0.2,
     'Level1Bg4': 0,
     'Level1Bg5': 0,
     'Level2Bg0': 1,
@@ -110,6 +160,22 @@ ENTITY_SPEED = {
     'Enemy1Shot': 5,
     'Enemy2': 1,
     'Enemy2Shot': 2,
+    'Explosion0': 1,
+    'Explosion1': 1,
+    'Explosion2': 1,
+    'Explosion3': 1,
+    'Explosion4': 1,
+    'Explosion5': 1,
+    'Explosion6': 1,
+    'Explosion7': 1,
+    'Explosion8': 1,
+    'Explosion9': 1,
+    'Explosion10': 1,
+    'Explosion11': 1,
+    'Explosion12': 1,
+    'Explosion13': 1,
+    'Explosion14': 1,
+    'Explosion15': 1,
 
 }
 
@@ -137,25 +203,25 @@ SPAWN_TIME = 1000
 
 #
 TIMEOUT_STEP = 100  # 100ms
-TIMEOUT_LEVEL = 20000  # 20 segundos
+TIMEOUT_LEVEL = 40000  # 20 segundos
 
 # W
-WIN_WIDTH = 600
-WIN_HEIGHT = 900
+WIN_WIDTH = 500
+WIN_HEIGHT = 750
 
 # S
-SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
-             'EnterName': (WIN_WIDTH / 2, 80),
-             'Label': (WIN_WIDTH / 2, 90),
-             'Name': (WIN_WIDTH / 2, 110),
-             0: (WIN_WIDTH / 2, 110),
-             1: (WIN_WIDTH / 2, 130),
-             2: (WIN_WIDTH / 2, 150),
-             3: (WIN_WIDTH / 2, 170),
-             4: (WIN_WIDTH / 2, 190),
-             5: (WIN_WIDTH / 2, 210),
-             6: (WIN_WIDTH / 2, 230),
-             7: (WIN_WIDTH / 2, 250),
-             8: (WIN_WIDTH / 2, 270),
-             9: (WIN_WIDTH / 2, 290),
+SCORE_POS = {'Title': (WIN_WIDTH / 2, 250),
+             'EnterName': (WIN_WIDTH / 2, 290),
+             'Label': (WIN_WIDTH / 2, 300),
+             'Name': (WIN_WIDTH / 2, 320),
+             0: (WIN_WIDTH / 2, 330),
+             1: (WIN_WIDTH / 2, 350),
+             2: (WIN_WIDTH / 2, 370),
+             3: (WIN_WIDTH / 2, 390),
+             4: (WIN_WIDTH / 2, 410),
+             5: (WIN_WIDTH / 2, 430),
+             6: (WIN_WIDTH / 2, 450),
+             7: (WIN_WIDTH / 2, 470),
+             8: (WIN_WIDTH / 2, 490),
+             9: (WIN_WIDTH / 2, 510),
              }

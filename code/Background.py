@@ -9,6 +9,10 @@ class Background(Entity):
         super().__init__(name, position)
 
     def move(self):
-        self.rect.centery += ENTITY_SPEED[self.name]
-        if self.rect.top >= WIN_HEIGHT:
-            self.rect.bottom = 0
+        self.float_x += ENTITY_SPEED[self.name]
+        self.rect.x = int(self.float_x)
+
+        if self.rect.left >= WIN_WIDTH:
+            self.float_x = -self.rect.width
+            self.rect.x = int(self.float_x)
+

@@ -12,6 +12,8 @@ class Entity(ABC):
         self.name = name
         self.surf = pygame.image.load('./asset/' + name + '.png').convert_alpha()
         self.rect = self.surf.get_rect(left=position[0], top=position[1])
+        self.float_x = float(position[0]) # Posição Left real em float
+        self.float_y = float(position[1]) # Posição Top real em float
         self.speed = 0
         self.health = ENTITY_HEALTH[self.name]
         self.damage = ENTITY_DAMAGE[self.name]
