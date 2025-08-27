@@ -6,12 +6,16 @@ from code.Entity import Entity
 
 
 class Enemy(Entity):
-    def __init__(self, name: str, position: tuple):
+    def __init__(self, name: str, position: tuple, direction: str = "left"):
         super().__init__(name, position)
         self.shot_delay = ENTITY_SHOT_DELAY[self.name]
+        self.direction = direction # Left or Right
 
     def move(self):
-        self.rect.centerx -= ENTITY_SPEED[self.name]
+        if self.direction == "left":
+            self.rect.centerx -= ENTITY_SPEED[self.name]
+        elif self.direction == "right":
+            self.rect.centerx += ENTITY_SPEED[self.name]
 
     def shoot(self):
         self.shot_delay -= 1

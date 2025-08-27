@@ -1,4 +1,6 @@
-from code.Const import WIN_HEIGHT
+from tkinter import Widget
+
+from code.Const import WIN_HEIGHT, WIN_WIDTH
 from code.Enemy import Enemy
 from code.EnemyShot import EnemyShot
 from code.Entity import Entity
@@ -11,7 +13,9 @@ class EntityMediator:
     @staticmethod
     def __verify_collision_window(ent: Entity):
         if isinstance(ent, Enemy):
-            if ent.rect.right <= 0:
+            if ent.direction == "left" and ent.rect.right < 0:
+                ent.health = 0
+            elif ent.direction == "right" and ent.rect.left > WIN_WIDTH:
                 ent.health = 0
         if isinstance(ent, PlayerShot):
             if ent.rect.bottom <= 0:
@@ -68,4 +72,7 @@ class EntityMediator:
             if ent.health <= 0:
                 if isinstance(ent, Enemy):
                     EntityMediator.__give_score(ent, entity_list)
+                    from code.Explosion import Explosion
+                    explosion = Explosion(ent.rect.center)
+                    entity_list.append(explosion)
                 entity_list.remove(ent)

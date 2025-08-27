@@ -19,17 +19,19 @@ class EntityFactory:
                     list_bg.append(Background(f'Level1Bg{i}', (0, 0)))
                     list_bg.append(Background(f'Level1Bg{i}', (WIN_WIDTH, 0)))
                 return list_bg
-            case 'Level2Bg':
-                list_bg = []
-                for i in range(5):  # level2bg images number
-                    list_bg.append(Background(f'Level2Bg{i}', (0, 0)))
-                    list_bg.append(Background(f'Level2Bg{i}', (WIN_WIDTH, 0)))
-                return list_bg
             case 'Player1':
                 return Player('Player1', (WIN_WIDTH / 2, 493))
             case 'Player2':
                 return Player('Player2', (WIN_WIDTH / 2 + 40, 493))
             case 'Enemy1':
-                return Enemy('Enemy1', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT // 2)))
+                side = random.choice(("left", "right"))
+                if side == "left":
+                    return Enemy('Enemy1', (-50, random.randint(40, WIN_HEIGHT // 2)), direction="right")
+                else:
+                    return Enemy('Enemy1', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT // 2)), direction="left")
             case 'Enemy2':
-                return Enemy('Enemy2', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT // 2)))
+                side = random.choice(("left", "right"))
+                if side == "left":
+                    return Enemy('Enemy2', (-50, random.randint(40, WIN_HEIGHT // 2)), direction="right")
+                else:
+                    return Enemy('Enemy2', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT // 2)), direction="left")

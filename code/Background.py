@@ -15,4 +15,3 @@ class Background(Entity):
         if self.rect.left >= WIN_WIDTH:
             self.float_x = -self.rect.width
             self.rect.x = int(self.float_x)
-
